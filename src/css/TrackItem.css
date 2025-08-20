@@ -1,7 +1,16 @@
 .track {
   display: flex;
   align-items: center;
-  padding-block: 0.5rem;
+  padding: 0.8rem;
+  cursor: pointer;
+}
+
+.track:hover {
+  background-color: #333333;
+}
+
+.track .selected {
+  background-color: #333333;
 }
 
 .track .track-info {

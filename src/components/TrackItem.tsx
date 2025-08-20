@@ -3,13 +3,22 @@ import type { Track } from "../types/track";
 
 interface TrackProps {
   track: Track;
+  onClick: (track: Track) => void;
+  isSelected: boolean;
 }
 
-export const TrackItem = ({ track }: TrackProps): ReactElement => {
+export const TrackItem = ({
+  track,
+  onClick,
+  isSelected,
+}: TrackProps): ReactElement => {
   const { title, artist } = track;
   return (
     <>
-      <section className="track">
+      <section
+        className={`track ${isSelected ? "selected" : ""}`}
+        onClick={() => onClick(track)}
+      >
         <figure className="track-album-cover"></figure>
         <div className="track-info">
           <p className="track-title">{title}</p>
