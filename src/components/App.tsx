@@ -5,7 +5,7 @@ import { tracks } from "../data";
 import type { Track } from "../types/track";
 
 function App() {
-  const [currentTrack, setCurrentTrack] = useState(tracks[0]);
+  const [currentTrack, setCurrentTrack] = useState<Track | null>(null);
 
   const handleTrackClick = (track: Track) => {
     setCurrentTrack(track);
@@ -22,12 +22,16 @@ function App() {
                 key={track.id}
                 track={track}
                 onClick={handleTrackClick}
-                isSelected={currentTrack.id === track.id}
+                isSelected={currentTrack?.id === track.id}
               />
             ))}
           </div>
           <div className="current-track">
-            <CurrentTrack track={currentTrack} />
+            {currentTrack ? (
+              <CurrentTrack track={currentTrack} />
+            ) : (
+              <p className="empty">No track selected</p>
+            )}
           </div>
         </div>
       </main>
