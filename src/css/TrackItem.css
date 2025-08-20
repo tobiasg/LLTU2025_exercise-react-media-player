@@ -1,0 +1,25 @@
+.track {
+  display: flex;
+  align-items: center;
+  padding-block: 0.5rem;
+}
+
+.track .track-info {
+}
+
+.track .track-title {
+  font-size: 16px;
+}
+
+.track .track-artist {
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+.track .track-album-cover {
+  width: 60px;
+  height: 60px;
+  background-color: #666666;
+  border-radius: 4px;
+  margin-right: 15px;
+}
