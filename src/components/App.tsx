@@ -11,6 +11,18 @@ function App() {
     setCurrentTrack(track);
   };
 
+  const handleAddToPlaylist = () => {
+    if (currentTrack) {
+      console.log("add to playlist");
+    }
+  };
+
+  const handleFavoriteToggle = () => {
+    if (currentTrack) {
+      console.log("toggle favorite");
+    }
+  };
+
   return (
     <>
       <header></header>
@@ -28,7 +40,11 @@ function App() {
           </div>
           <div className="current-track">
             {currentTrack ? (
-              <CurrentTrack track={currentTrack} />
+              <CurrentTrack
+                track={currentTrack}
+                onAddToPlaylist={handleAddToPlaylist}
+                onFavoriteToggle={handleFavoriteToggle}
+              />
             ) : (
               <p className="empty">No track selected</p>
             )}

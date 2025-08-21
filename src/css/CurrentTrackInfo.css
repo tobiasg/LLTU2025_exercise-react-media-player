@@ -1,0 +1,23 @@
+.current-track-info {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 2rem;
+}
+
+.current-track-info div {
+  text-align: center;
+}
+
+.current-track-info .track-title {
+  color: white;
+  font-weight: bold;
+}
+
+.current-track-info .track-artist {
+  color: wheat;
+}
+
+.current-track-info .add-to-playlist,
+.current-track-info .favorite {
+  cursor: pointer;
+}
