@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { CurrentTrack } from "./CurrentTrack";
 import { TrackItem } from "./TrackItem";
-import { tracks } from "../data";
 import type { Track } from "../types/track";
 import { Header } from "./Header";
+import { playlist } from "../data";
 
 function App() {
   const [currentTrack, setCurrentTrack] = useState<Track | null>(null);
@@ -26,11 +26,11 @@ function App() {
 
   return (
     <>
-      <Header />
       <main>
+        <Header playlist={playlist} />
         <div className="container">
-          <div className="track-list">
-            {tracks.map((track) => (
+          <section className="tracks">
+            {playlist.tracks.map((track) => (
               <TrackItem
                 key={track.id}
                 track={track}
@@ -38,8 +38,8 @@ function App() {
                 isSelected={currentTrack?.id === track.id}
               />
             ))}
-          </div>
-          <div className="current-track">
+          </section>
+          <section className={`player ${!currentTrack ? "empty" : ""}`}>
             {currentTrack ? (
               <CurrentTrack
                 track={currentTrack}
@@ -47,9 +47,9 @@ function App() {
                 onFavoriteToggle={handleFavoriteToggle}
               />
             ) : (
-              <p className="empty">No track selected</p>
+              <p>No track selected</p>
             )}
-          </div>
+          </section>
         </div>
       </main>
     </>

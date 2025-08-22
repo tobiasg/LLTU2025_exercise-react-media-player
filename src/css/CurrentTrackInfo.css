@@ -1,7 +1,6 @@
 .current-track-info {
   display: flex;
   justify-content: space-between;
-  padding-inline: 2rem;
 }
 
 .current-track-info div {

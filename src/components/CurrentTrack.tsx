@@ -17,18 +17,18 @@ export const CurrentTrack = ({
 }: CurrentTrackProps): ReactElement => {
   return (
     <>
-      <section className="current-track">
-        <figure className="track-album-cover"></figure>
-        <div className="current-track-controls-container">
-          <CurrentTrackInfo
-            track={track}
-            onAddToPlaylist={onAddToPlaylist}
-            onFavoriteToggle={onFavoriteToggle}
-          />
-          <ProgressBar track={track} />
-          <Controls track={track} />
-        </div>
-      </section>
+      <div className="current-track">
+        <figure className="track-album-cover">
+          <img src={track.cover} alt="" />
+        </figure>
+        <CurrentTrackInfo
+          track={track}
+          onAddToPlaylist={onAddToPlaylist}
+          onFavoriteToggle={onFavoriteToggle}
+        />
+        <ProgressBar track={track} />
+        <Controls track={track} />
+      </div>
     </>
   );
 };

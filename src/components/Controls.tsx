@@ -6,8 +6,6 @@ interface ControlProps {
 }
 
 export const Controls = ({ track }: ControlProps): ReactElement => {
-  const { duration } = track;
-
   return (
     <>
       <div className="play-controls">

@@ -1,10 +1,14 @@
 import type { ReactElement } from "react";
-interface HeaderProps {}
+import type { Playlist } from "../types/playlist";
 
-export const Header = ({}: HeaderProps): ReactElement => {
+interface HeaderProps {
+  playlist: Playlist;
+}
+
+export const Header = ({ playlist }: HeaderProps): ReactElement => {
   return (
     <>
-      <header className="header">Playlist - Favorites</header>
+      <div className="header">Playlist - {playlist.name}</div>
     </>
   );
 };

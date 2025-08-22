@@ -1,32 +1,72 @@
-import type { Track } from "./types/track";
+import type { Playlist } from "./types/playlist";
 
-export const tracks: Track[] = [
-  {
-    id: 1,
-    title: "my mind is my mountain",
-    artist: "Deftones",
-    album: "private music",
-    duration: 171,
-  },
-  {
-    id: 2,
-    title: "milk of the madonna",
-    artist: "Deftones",
-    album: "private music",
-    duration: 249,
-  },
-  {
-    id: 3,
-    title: "Falter",
-    artist: "Kittie",
-    album: "Fire",
-    duration: 238,
-  },
-  {
-    id: 4,
-    title: "Vultures",
-    artist: "Kittie",
-    album: "Fire",
-    duration: 198,
-  },
-];
+export const playlist: Playlist = {
+  id: 1,
+  name: "Favorites",
+  tracks: [
+    {
+      id: 1,
+      title: "my mind is my mountain",
+      artist: "Deftones",
+      album: "private music",
+      cover: "/deftones-private-music.jpg",
+      duration: 171,
+    },
+    {
+      id: 2,
+      title: "milk of the madonna",
+      artist: "Deftones",
+      album: "private music",
+      cover: "/deftones-private-music.jpg",
+      duration: 249,
+    },
+    {
+      id: 3,
+      title: "Falter",
+      artist: "Kittie",
+      album: "Fire",
+      cover: "/kittie-fire.jpg",
+      duration: 238,
+    },
+    {
+      id: 4,
+      title: "Vultures",
+      artist: "Kittie",
+      album: "Fire",
+      cover: "/kittie-fire.jpg",
+      duration: 198,
+    },
+    {
+      id: 5,
+      title: "The Sofa",
+      artist: "Wolf Alice",
+      album: "The Clearing",
+      cover: "/wolf-alice-the-clearing.png",
+      duration: 266,
+    },
+    {
+      id: 6,
+      title: "White Horses",
+      artist: "Wolf Alice",
+      album: "The Clearing",
+      cover: "/wolf-alice-the-clearing.png",
+      duration: 270,
+    },
+    {
+      id: 7,
+      title: "One",
+      artist: "Metallica",
+      album: "...And Justice for All",
+      cover: "/metallica-and-justice-for-all.jpg",
+      duration: 446,
+    },
+    {
+      id: 8,
+      title: "Hell On Earth",
+      artist: "Iron Maiden",
+      album: "Senjutsu",
+      cover: "/iron-maiden-senjutsu.jpg",
+      duration: 679,
+    },
+  ],
+};

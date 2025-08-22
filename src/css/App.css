@@ -7,24 +7,60 @@ body {
   background-color: #0f0f0f;
   color: #eef0f2;
   font-family: "Mozilla Text", sans-serif;
+
   max-width: 800px;
   width: 100%;
-  margin: 32px auto;
+  margin: 2rem auto;
 }
 
 .container {
   display: flex;
-  width: 800px;
-  height: 800px;
+  width: 100%;
 }
 
-.track-list {
-  width: 300px;
-  overflow-y: auto;
+.tracks {
+  flex: 1;
   background-color: #2a2a2a;
+  overflow-y: auto;
 }
 
-.current-track {
-  width: 500px;
+.player {
+  flex: 1;
   background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+}
+
+.player.empty {
+  align-items: center;
+}
+
+.empty {
+  text-align: center;
+  color: #b3b3b3;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .container {
+    flex-direction: column;
+    max-width: 100%;
+    height: 600px;
+  }
+
+  .tracks {
+    flex: 1;
+    overflow-y: visible;
+  }
+
+  .player {
+    flex: 1;
+  }
+
+  .player.empty {
+    padding: 2rem;
+  }
 }

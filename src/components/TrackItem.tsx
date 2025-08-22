@@ -12,14 +12,16 @@ export const TrackItem = ({
   onClick,
   isSelected,
 }: TrackProps): ReactElement => {
-  const { title, artist } = track;
+  const { title, artist, cover } = track;
   return (
     <>
       <section
         className={`track ${isSelected ? "selected" : ""}`}
         onClick={() => onClick(track)}
       >
-        <figure className="track-album-cover"></figure>
+        <figure className="track-album-cover">
+          <img src={cover} alt="" />
+        </figure>
         <div className="track-info">
           <p className="track-title">{title}</p>
           <p className="track-artist">{artist}</p>

@@ -1,21 +1,18 @@
 .current-track .track-album-cover {
   height: 350px;
-  margin: 20px;
   background-color: #666666;
   border-radius: 4px;
 }
 
-.current-track .empty {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+.current-track .track-album-cover img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.current-track .current-track-controls-container {
+.current-track {
   display: flex;
+  gap: 3rem;
   flex-direction: column;
-  justify-content: space-between;
-  padding-block: 1.5rem;
+  padding-block: 2rem;
 }
