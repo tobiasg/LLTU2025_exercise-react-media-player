@@ -1,5 +1,7 @@
 @import url("./App.css");
+@import url("./Header.css");
 @import url("./TrackItem.css");
 @import url("./CurrentTrack.css");
 @import url("./CurrentTrackInfo.css");
 @import url("./ProgressBar.css");
+@import url("./Controls.css");

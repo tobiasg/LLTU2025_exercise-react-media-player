@@ -1,0 +1,24 @@
+.play-controls {
+  display: flex;
+  justify-content: center;
+  padding-inline: 2rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+.play-controls .play {
+  font-size: 64px;
+}
+
+.play-controls .rewind,
+.play-controls .forward {
+  font-size: 42px;
+}
+
+.play-controls .repeat,
+.play-controls .shuffle,
+.play-controls .play,
+.play-controls .rewind,
+.play-controls .forward {
+  cursor: pointer;
+}

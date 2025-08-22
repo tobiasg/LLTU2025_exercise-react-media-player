@@ -3,6 +3,7 @@ import { CurrentTrack } from "./CurrentTrack";
 import { TrackItem } from "./TrackItem";
 import { tracks } from "../data";
 import type { Track } from "../types/track";
+import { Header } from "./Header";
 
 function App() {
   const [currentTrack, setCurrentTrack] = useState<Track | null>(null);
@@ -25,7 +26,7 @@ function App() {
 
   return (
     <>
-      <header></header>
+      <Header />
       <main>
         <div className="container">
           <div className="track-list">
